@@ -1,9 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
+
 function Section({ title1,  title2,  title3, button, backgroundImage}) {
 
     return (
         <Wrap bgImg={backgroundImage}>
+        <Fade  bottom>
         <Content>
            <Text>
                <h2>{title1}</h2>
@@ -14,6 +17,7 @@ function Section({ title1,  title2,  title3, button, backgroundImage}) {
                {button}
            </Button>
            </Content>
+           </Fade>
         </Wrap>
     )
 }
@@ -30,7 +34,7 @@ const Wrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: ${({ props }) => `url("/images/${props.bgImg}.jpg")`}
+    background-image: ${(props) => `url("/images/${props.bgImg}")`};
     
 `
 const Text = styled.div`
@@ -39,7 +43,7 @@ const Text = styled.div`
 `
 const Content = styled.div`
     color: #fff;
-    margin: 0 0 11em 4em;
+    margin: 0 0 9em 4em;
     width: 29em;
 
     h2, h1 {
@@ -57,6 +61,31 @@ const Content = styled.div`
     }
     p {
         letter-spacing: 1.5px;
+    }
+
+    @media only screen and (max-width: 900px) {
+         
+            color: #fff;
+            margin: 0 0 3em 1em;
+            width: 18em;
+        
+            h2 {
+                font-size: smaller;
+            }
+            p {
+                letter-spacing: 0;
+            }
+            h1 {
+                font-size: 2em;
+            }
+    }
+
+    @media only screen and (min-width: 375px) {
+        width: 22em;
+    }
+
+    @media only screen and (max-width: 280px) {
+        width: 16em;
     }
     
 `
@@ -76,5 +105,9 @@ const Button = styled.div`
         background: #141414;
         color: #fff;
         transition: .5s;
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 47%;
     }
 `

@@ -7,3 +7,10 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+.span1 {
+    color: #979797;
+}
