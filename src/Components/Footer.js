@@ -6,25 +6,39 @@ function Footer() {
     <Container>
       <List>
         <p>
-          <a href="#"><span className="span1">SPACEX © 2021</span></a>
+          <a href="#">
+            <span className="span1">SPACEX © 2021</span>
+          </a>
         </p>
         <p>
-          <a href="#"><span>TWITTER</span></a>
+          <a href="#">
+            <span>TWITTER</span>
+          </a>
         </p>
         <p>
-          <a href="#"><span>YOUTUBE</span></a>
+          <a href="#">
+            <span>YOUTUBE</span>
+          </a>
         </p>
         <p>
-          <a href="#"><span>INSTAGRAM</span></a>
+          <a href="#">
+            <span>INSTAGRAM</span>
+          </a>
         </p>
         <p>
-          <a href="#"><span>FLICKR</span></a>
+          <a href="#">
+            <span>FLICKR</span>
+          </a>
         </p>
         <p>
-          <a href="#"><span>LINKEDIN</span></a>
+          <a href="#">
+            <span>LINKEDIN</span>
+          </a>
         </p>
         <p>
-          <a href="#"><span>PRIVACY POLICY</span></a>
+          <a href="#">
+            <span>PRIVACY POLICY</span>
+          </a>
         </p>
       </List>
     </Container>
@@ -38,15 +52,19 @@ const List = styled.div`
   background: #000;
   padding: 34px 0;
   display: flex;
- justify-content: center;
+  justify-content: center;
 
- p {
-     font-size: 12px;
-     font-family: "Oswald", sans-serif;
- }
+  p {
+    font-size: 12px;
+    font-family: "Oswald", sans-serif;
+  }
 
- span {
-     padding-right: 4em;
- }
- 
+  span {
+    padding-right: 4em;
+  }
+
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+    padding-left: 4em;
+  }
 `;
